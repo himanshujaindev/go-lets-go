@@ -1,1 +1,8 @@
+1. Strong (Type of a val cannot change) and Statically (Type must be defined at compile time) Typed
+2. Fast compile time
+3. Garbage collected
+4. Built-in concurrency
+5. Compile to standalone binaries
+
+
 
