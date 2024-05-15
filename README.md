@@ -1,2 +1,2 @@
-# go-let-s-go
+# go-lets-go
 Basics of Go
