@@ -1,9 +1,18 @@
-1. Strong (Type of a val cannot change) and Statically (Type must be defined at compile time) Typed
-2. Fast compile time
-3. Garbage collected
-4. Built-in concurrency
-5. Compile to standalone binaries
+1. Statically Typed (Type must be defined at compile time)
+2. Strong Typed (Type of a var cannot change)
+3. GO is compiled
+4. Fast compile time (Code -> Binary)
+5. Built in concurrency (Goroutine)
+6. Simple (Garbage Collection)
+
+packages - Folder with go files
+modules - Collection of packages
 
 
+Commands:
 
-go env
+go mod init go_tutorials
+go build -o bin/main tutorials/main.go
+./bin/main
+
+go run tutorials/main.go  (Compile and Run) - No exe generated
