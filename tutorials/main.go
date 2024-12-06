@@ -53,6 +53,21 @@ func main() {
 		fmt.Printf("%v - %v", myReturn1, myReturn2)
 	}
 
+	// switch
+	switch {
+	case num1==1:
+		fmt.Println("num1 is 1")
+	default:
+		fmt.Println("default")
+	}
+
+	switch num1{
+	case 1:
+		fmt.Println("num1 is 1")
+	default:
+		fmt.Println("default")
+	}
+
 }
 
 func printMe(printVal string) (int, int, error) {
