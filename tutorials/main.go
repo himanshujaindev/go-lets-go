@@ -3,6 +3,7 @@ import (
 	"errors"
 	"fmt"
 	"unicode/utf8"
+	"strings"
 )
 
 func main() {
@@ -68,6 +69,116 @@ func main() {
 		fmt.Println("default")
 	}
 
+
+	// array
+	var intArr [3]int32 // [0,0,0] - 12 bytes
+	intArr[1] = 1
+	fmt.Println(intArr[0])
+	fmt.Println(intArr[1:3])
+
+	fmt.Println(&intArr[0])
+	fmt.Println(&intArr[1])
+	fmt.Println(&intArr[2])
+
+	// var intArr1 [3]int32 = [3]int32{2,3,4}
+	// intArr1 := [3]int32{2,3,4}
+	intArr1 := [...]int32{2,3,4, 4,5 ,6}
+	fmt.Println(intArr1)
+
+
+
+	// slice
+	var intSlice []int32 = []int32{10,20,30}
+	fmt.Printf("Length is %v with capacity %v\n", len(intSlice), cap(intSlice))
+	intSlice = append(intSlice, 40)
+	fmt.Printf("Length is %v with capacity %v\n", len(intSlice), cap(intSlice)) // [10 20 30 40 * *]
+
+	appendSlice := []int32{50,60}
+	intSlice = append(intSlice, appendSlice...)
+
+	fmt.Println(intSlice)
+
+	intSlice1 := make([]int32, 3, 8) // (type, len, cap)
+	fmt.Println(intSlice1)
+
+
+	// map[string]uint8 - key=string; value=uint8
+	myMap := make(map[string]uint8)
+	fmt.Println(myMap)
+
+	myMap2 := map[string]uint8{"H":1, "J":2}
+	fmt.Println(myMap2["H"])
+	fmt.Println(myMap2["K"]) // value = default of type uint8 = 0
+
+	var age, ok = myMap2["J"]
+	fmt.Println(age,ok)
+
+	delete(myMap2, "J")
+	fmt.Println(myMap2)
+
+	
+	
+	
+	// Loops
+	for name, age:= range myMap2{ // order is not preserved
+		fmt.Printf("Name: %v; Value: %v\n", name, age)
+	}
+
+	for i, v:=range intArr1 {
+		fmt.Printf("index: %v; value: %v\n", i, v)
+	}
+
+	// while loop in go
+	i:=0
+	for i<5{
+		fmt.Println(i)
+		i+=1
+	}
+
+	j:=0
+	for {
+		if j>=5 {
+			break
+		}
+		fmt.Println(j)
+		j+=1
+	}
+
+	for k:=0; k<5; k++{
+		fmt.Println(k)
+	}
+
+
+	// string
+	var myString = "résumé"
+	// utf-8 = [01110010, 11000011, 10101001, 01110011, 01110101, 01101101, 11000011, 10101001]
+	// [r, é, * , s, u, m, é, *]
+	// [114, 195, 169, 115, 117, 109, 195, 169]
+	var indexed = myString[2] // 195
+	fmt.Println(myString)
+	fmt.Println(len(myString))
+	fmt.Printf("%v, %T\n", indexed, indexed)
+
+	for i, v:= range myString { // intellegent = é = 233
+		fmt.Println(i, v)
+	}
+
+
+	// easy way = cast into rune
+	var myRune1 = []rune("résumé") // [114,233,115,117,109,233]
+	fmt.Println(myRune1)
+	fmt.Println(len(myRune1))
+
+
+	strSlice := []string{"h","i","m"}
+	// var catStr = ""
+	var strBuilder strings.Builder
+	for i := range strSlice{
+		// catStr += strSlice[i] // creates new string everytime
+		strBuilder.WriteString(strSlice[i])
+	}
+	// fmt.Printf("%v\n", catStr)
+	fmt.Printf("%v\n", strBuilder.String())
 }
 
 func printMe(printVal string) (int, int, error) {

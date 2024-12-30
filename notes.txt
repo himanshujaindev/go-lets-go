@@ -16,3 +16,21 @@ go build -o bin/main tutorials/main.go
 ./bin/main
 
 go run tutorials/main.go  (Compile and Run) - No exe generated
+
+
+array - fixed length, same type, indexable, contiguous in memory
+slice - array + additional funtionality - more general, powerful and convenient interface
+// initiallizing slice with initial capacity has better performance
+
+
+strings
+- array of utf-8 encoded bytes
+- immutable
+
+utf-8 encoding = strings in go
+ascii = 7 bits = 128 chars
+utf-32 = 32 bits = lots of unused bits
+utf-8 = variable length encoding
+
+ascii = 1 byte = 0xxx...
+é = 233 unicode point number = 2 bytes = 11000011 10101001
