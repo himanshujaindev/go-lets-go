@@ -16,7 +16,7 @@ go build -o bin/main tutorials/main.go
 ./bin/main
 
 go run tutorials/main.go  (Compile and Run) - No exe generated
-
+go run tutorials/goroutine.go
 
 array - fixed length, same type, indexable, contiguous in memory
 slice - array + additional funtionality - more general, powerful and convenient interface
@@ -34,3 +34,28 @@ utf-8 = variable length encoding
 
 ascii = 1 byte = 0xxx...
 é = 233 unicode point number = 2 bytes = 11000011 10101001
+
+
+struct - user-defined type, define methods that link with struct
+anonymous struct - define and initialize, not reuseable
+
+
+interface - general template for any object
+
+
+pointers - store memory location
+pass by value; pass by reference
+
+goroutines
+- Launch multiple functions and run them concurrently
+- concurrency != parallel execution
+- concurrency = multiple tasks in-progress at the same time
+- if multi-core CPU -> parallel execution
+
+channels
+- enables goroutine to pass around infomation
+- hold data (int, slice, etc)
+- thread safe (avoid race condtion during r&w)
+- listen for data
+- unbuffered channel and buffered channel (store multiple values)
+- select stmt = if stmt for channels
