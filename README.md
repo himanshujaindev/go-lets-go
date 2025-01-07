@@ -8,3 +8,7 @@ Basics of Go
 Websockets
 1. https://www.youtube.com/watch?v=pKpKv9MKN-E
 
+
+Use Cases:
+1. Build API - https://github.com/avukadin/goapi/tree/main
+2. 
