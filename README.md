@@ -7,6 +7,7 @@ Basics of Go
 
 Learning Resources:
 1. https://gobyexample.com/
+2. https://go.dev/doc/
 
 Channels
 1. https://www.youtube.com/watch?v=KBZlN0izeiY
