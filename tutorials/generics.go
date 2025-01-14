@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func generics() {
 	var intSlice []int = []int{1, 2, 3}
 	fmt.Println(sumSlice[int](intSlice))
 

@@ -7,7 +7,7 @@ import (
 
 // channels + goroutines
 
-func main() {
+func basics_channels() {
 	var c = make(chan int)
 
 	// c <- 1 // c: [1] // unbuffered channel with only one int value

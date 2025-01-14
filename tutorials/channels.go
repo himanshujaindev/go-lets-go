@@ -9,7 +9,7 @@ import (
 var MAX_PRICE float32 = 5
 var MAX_PANNER_PRICE float32 = 5
 
-func main() {
+func channels() {
 	var foodChannel = make(chan string) // to find which website has min price of the food in parallel
 	var pannerChannel = make(chan string)
 	var websites = []string{"walmart.com", "cosmos.com", "wholefood.com"}

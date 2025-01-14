@@ -11,12 +11,14 @@ modules - Collection of packages
 
 Commands:
 
-go mod init go_tutorials
-go build -o bin/main tutorials/main.go
-./bin/main
+cd tutorials
+go mod init tutorials
+go build -o main main.go
+./main
 
-go run tutorials/main.go  (Compile and Run) - No exe generated
-go run tutorials/goroutine.go
+go run main.go  (Compile and Run) - No exe generated (To just run this file)
+
+go run *.go -> To run all the files
 
 array - fixed length, same type, indexable, contiguous in memory
 slice - array + additional funtionality - more general, powerful and convenient interface
@@ -59,3 +61,11 @@ channels
 - listen for data
 - unbuffered channel and buffered channel (store multiple values)
 - select stmt = if stmt for channels
+
+
+
+---
+
+http
+go mod init http
+go run main.go

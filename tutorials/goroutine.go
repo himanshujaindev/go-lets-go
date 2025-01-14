@@ -13,7 +13,7 @@ var wg = sync.WaitGroup{} // Counters
 var dbData = []string{"id1", "id2", "id3", "id4", "id5"}
 var results = []string{}
 
-func main() {
+func goroutine() {
 	t0 := time.Now()
 	for i := 0; i < len(dbData); i++ {
 		wg.Add(1)    // increment counter by 1
