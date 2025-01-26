@@ -39,7 +39,7 @@ ascii = 1 byte = 0xxx...
 
 
 struct - user-defined type, define methods that link with struct
-anonymous struct - define and initialize, not reuseable
+anonymous struct - define and initialize, not reusable
 
 
 interface - general template for any object
@@ -76,4 +76,7 @@ go run main.go
 
 IMPORTANT TOPICS IN GO
 1. slice, map
-2. fns - multiple returns, variable num of args
+2. fns - multiple returns, variable num of args, closure (anonymous functions)
+3. pointers
+4. strings and rune
+5. structs
