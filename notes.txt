@@ -75,4 +75,5 @@ go run main.go
 ---
 
 IMPORTANT TOPICS IN GO
-1. slice
+1. slice, map
+2. fns - multiple returns, variable num of args
