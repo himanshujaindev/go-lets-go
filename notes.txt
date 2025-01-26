@@ -69,3 +69,10 @@ channels
 http
 go mod init http
 go run main.go
+
+
+
+---
+
+IMPORTANT TOPICS IN GO
+1. slice
