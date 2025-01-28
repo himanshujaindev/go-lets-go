@@ -54,13 +54,13 @@ goroutines
 - concurrency = multiple tasks in-progress at the same time
 - if multi-core CPU -> parallel execution
 
-channels
+channels (pipe that connects gorotines)
 - enables goroutine to pass around infomation
 - hold data (int, slice, etc)
 - thread safe (avoid race condtion during r&w)
 - listen for data
 - unbuffered channel and buffered channel (store multiple values)
-- select stmt = if stmt for channels
+- select stmt = if stmt for channels -> Used to wait on multiple channels
 
 
 
@@ -79,4 +79,8 @@ IMPORTANT TOPICS IN GO
 2. fns - multiple returns, variable num of args, closure (anonymous functions)
 3. pointers
 4. strings and rune
-5. structs
+5. structs, methods and interfaces
+6. Generics
+7. Errors
+8. Goroutines, Channels and Select
+
