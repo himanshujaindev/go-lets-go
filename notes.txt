@@ -83,4 +83,4 @@ IMPORTANT TOPICS IN GO
 6. Generics
 7. Errors
 8. Goroutines, Channels and Select
-
+Continue from timers - https://gobyexample.com/timers
